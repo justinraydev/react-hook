@@ -1,0 +1,58 @@
+{
+  "name": "react-ecommerce-hook",
+  "version": "1.0.4",
+  "description": "a basic shopping cart react hook",
+  "main": "lib/src/index.js",
+  "typings": "lib/src/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vanyathecyborg/react-ecommerce-hook.git"
+  },
+  "files": [
+    "lib"
+  ],
+  "author": "vanyaistank (https://github.com/vanyaistank)",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "use",
+    "ecommerce",
+    "shoppingcart",
+    "cart",
+    "localstorage",
+    "persist",
+    "storage",
+    "store",
+    "react",
+    "hook"
+  ],
+  "scripts": {
+    "build": "tsc --pretty",
+    "clean": "rimraf lib && rimraf coverage",
+    "format": "prettier --write \"{src,__tests__}/**/*.ts\" --single-quote --trailing-comma es5",
+    "lint": "tslint --force --format verbose \"src/**/*.ts\"",
+    "jest": "jest",
+    "prepublishOnly": "yarn jest && yarn format && yarn lint && yarn clean && yarn build",
+    "coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "lodash.omit": "^4.5.0",
+    "react": "^16.13.1",
+    "react-dom": "16.13.1",
+    "typesafe-actions": "^5.1.0"
+  },
+  "peerDependencies": {
+    "react": "16.8.0-alpha.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.10",
+    "@types/lodash.omit": "^4.5.6",
+    "jest": "^26.4.2",
+    "prettier": "^2.1.0",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.2.0",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.0.2"
+  }
+}
